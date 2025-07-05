@@ -1,0 +1,108 @@
+
+{
+  "layer": "top",
+  "position": "top",
+  "height": 35,
+  "margin": "2", // adds outer margin to give floating feel
+  "modules-left": ["custom/arch", "hyprland/workspaces", "custom/sep", "custom/window_icons"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "custom/updates",
+    "pulseaudio",
+    "network",
+    //"backlight",
+    "cpu",
+    "memory",
+    "disk",
+    "battery",
+    "custom/power"
+  ],
+
+  // === Left Section ===
+  "custom/arch": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "wofi --show drun",
+    "interval": 0
+  }, "custom/sep": {
+    "format": "   ",
+    "interval": 0
+  },
+  //icon:     
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "1": "1", "2": "2", "3": "3", "4": "4 ", "5": "5 ",
+      "6": "6", "7": "7 ", "8": "8 ", "9": "9 ", "10": "10 "
+    }
+  },
+  "custom/window_icons": {
+    "exec": "~/.config/waybar/scripts/window_icons.sh",
+    "interval": 2,
+    //"format": "{}",
+    "return-type": "text",
+    //"max-length": 50,
+    "tooltip": false
+  },
+
+  // === Center Section ===
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "{:%A, %B %d, %Y}",
+    "interval": 60
+  },
+
+  // === Right Section ===
+  "custom/updates": {
+    "format": " {}",
+    "exec": "checkupdates | wc -l", // for Arch-based distros
+    "interval": 900,
+    "on-click": "alacritty -e sudo pacman -Syu"
+  },
+  "pulseaudio": {
+    "format": " {volume}%",
+    "tooltip": false,
+    "scroll-step": 5,
+    "on-click": "pavucontrol"
+  },
+  "network": {
+    "interface": "wlan0",
+    //"format": "{essid} {upload_speed} {download_speed}",
+    //"format": " {essid}   {upload_speed}   {download_speed}",
+    "format-wifi": " {essid}",
+    "format-alt": "{ifname}:  {upload_speed}  {download_speed}",
+    "format-ethernet": " {ifname}",
+    "format-disconnected": "󰖪",
+    "tooltip-format": "{ifname} - {ipaddr}\n-{bandwidthUpBytes} -{bandwidthDownBytes}\nSignal: {frequency}Mhz {signalStrength}%",
+    //"tooltip": false
+    "on-click": "alacritty -e 'nmtui'"
+  },
+  "backlight": {
+    "format": " {percent}%",
+    "on-scroll-up": "brightnessctl set +5%",
+    "on-scroll-down": "brightnessctl set 5%-"
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": false
+  },
+  "memory": {
+    "format": " {used:0.1f}G",
+    "tooltip": false
+  },
+  "disk": {
+    "format": " {free}",
+    "tooltip": false
+  },
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip": false
+  },
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "rofi -show power-menu -modi power-menu:~/.config/rofi/powermenu.sh",
+    "tooltip": false
+  }
+}
