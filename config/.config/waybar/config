@@ -96,7 +96,11 @@
     "tooltip": false
   },
   "battery": {
-    "format": "{icon} {capacity}%",
+    "bat": "BAT0",
+    "adapter": "AC",
+    "interval": 2,
+    "format": "{icon} {capacity}%({power}W {time})",
+    "format-charging": " {capacity}% ({power}W {time})",
     "format-icons": ["", "", "", "", ""],
     "tooltip": false
   },
