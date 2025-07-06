@@ -1,0 +1,13 @@
+show = drun
+prompt =   Launch
+width = 500
+height = 400
+location = center
+allow_images = true
+insensitive = true
+term = foot
+always_parse_args = true
+allow_markup = true
+hide_scroll = true
+sort_order = alphabetical
+
