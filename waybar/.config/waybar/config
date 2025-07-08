@@ -106,7 +106,7 @@
   },
   "custom/power": {
     "format": "⏻",
-    "on-click": "rofi -show power-menu -modi power-menu:~/.config/rofi/powermenu.sh",
+    "on-click": "wofi -show power-menu -modi power-menu:~/.config/rofi/powermenu.sh",
     "tooltip": false
   }
 }
