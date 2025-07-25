@@ -18,9 +18,9 @@
     "custom/power"
   ],
 
-  // === Left Section ===
+  // === Left Section ===
   "custom/arch": {
-    "format": "",
+    "format": " ",
     "tooltip": false,
     "on-click": "wofi --show drun",
     "interval": 0
