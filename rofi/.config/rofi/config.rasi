@@ -1,0 +1,18 @@
+configuration {
+    modi: "drun,run,window,ssh";
+    font: "JetBrainsMono Nerd Font 11";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    display-drun: " Apps ";
+    display-run: " Run ";
+    display-window: " Windows ";
+    display-ssh: " ssh ";
+    drun-display-format: "{icon} {name}";
+    matching: "fuzzy";
+    sort: true;
+    cycle: true;
+    sidebar-mode: true;
+    show-icons: true;
+}
+
+@theme "~/.config/rofi/themes/modern-dark.rasi"
