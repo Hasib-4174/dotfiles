@@ -3,7 +3,7 @@
 @import "~/.config/rofi/modules/drun.rasi"
 @import "~/.config/rofi/modules/run.rasi"
 @import "~/.config/rofi/modules/window.rasi"
-@import "~/.config/rofi/modules/ssh.rasi"
+// @import "~/.config/rofi/modules/ssh.rasi"
 
 * {
     background-color: #1E1E2Edd;   /* semi-transparent dark */

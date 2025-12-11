@@ -4,23 +4,25 @@
   "position": "top",
   "height": 35,
   "margin": "2", // adds outer margin to give floating feel
-  "modules-left": ["custom/arch", "hyprland/workspaces", "custom/sep", "custom/window_icons"],
-  "modules-center": ["clock"],
+  "modules-left": ["custom/arch","hyprland/workspaces", "custom/sep","custom/window_icons"],
+  "modules-center": [],
   "modules-right": [
     "custom/updates",
     "pulseaudio",
+    "battery",
     "network",
-    //"backlight",
+    "custom/sys_mon",
+    "backlight",
     "cpu",
     "memory",
     "disk",
-    "battery",
+    "clock",
     "custom/power"
   ],
 
-  // === Left Section ===
+  // === Left Section ===   
   "custom/arch": {
-    "format": " ",
+    "format": " ",
     "tooltip": false,
     "on-click": "wofi --show drun",
     "interval": 0
@@ -47,34 +49,42 @@
   },
 
   // === Center Section ===
+
+  // === system monitor script runner ====
+  "custom/sys_mon": {
+    "exec": "~/.config/waybar/scripts/sys_monitor.py",
+    "on-click": "~/.config/waybar/scripts/sys_monitor.py",
+    "return-type": "json",
+    "format": "{}",
+    "interval": 1,
+    "tooltip": true
+  },
+
   "clock": {
     "format": "{:%H:%M}",
     "tooltip-format": "{:%A, %B %d, %Y}",
     "interval": 60
   },
 
-  // === Right Section ===
+  // === Right Section === 󰭽
   "custom/updates": {
-    "format": " {}",
+    "format": "󰅢 {}",
     "exec": "checkupdates | wc -l", // for Arch-based distros
     "interval": 900,
     "on-click": "alacritty -e sudo pacman -Syu"
   },
   "pulseaudio": {
-    "format": " {volume}%",
+    "format": " {volume:02d}%",
     "tooltip": false,
     "scroll-step": 5,
     "on-click": "pavucontrol"
   },
   "network": {
     "interface": "wlan0",
-    //"format": "{essid} {upload_speed} {download_speed}",
-    //"format": " {essid}   {upload_speed}   {download_speed}",
-    "format-wifi": " {essid}",
-    "format-alt": "{ifname}:  {upload_speed}  {download_speed}",
-    "format-ethernet": " {ifname}",
+    "format-wifi": " ",
+    "format-ethernet": "󰈀",
     "format-disconnected": "󰖪",
-    "tooltip-format": "{ifname} - {ipaddr}\n-{bandwidthUpBytes} -{bandwidthDownBytes}\nSignal: {frequency}Mhz {signalStrength}%",
+    "tooltip-format": "{ifname} - {essid}\nIP: {ipaddr}\n-{bandwidthUpBytes} -{bandwidthDownBytes}\nSignal: {frequency}Mhz {signalStrength}%",
     //"tooltip": false
     "on-click": "alacritty -e 'nmtui'"
   },
@@ -85,11 +95,13 @@
   },
   "cpu": {
     "format": " {usage}%",
-    "tooltip": false
+    "tooltip": false,
+    "interval": 1
   },
   "memory": {
-    "format": " {used:0.1f}G",
-    "tooltip": false
+    "format": " {used:0.1f}G",
+    "tooltip": false,
+    "interval": 1
   },
   "disk": {
     "format": " {free}",
@@ -98,15 +110,21 @@
   "battery": {
     "bat": "BAT0",
     "adapter": "AC",
-    "interval": 2,
-    "format": "{icon} {capacity}%({power}W {time})",
-    "format-charging": " {capacity}% ({power}W {time})",
-    "format-icons": ["", "", "", "", ""],
-    "tooltip": false
+    "interval": 1,
+    //"format": "{icon} {capacity}%({power}W {time})",
+    "format": "{icon}",
+    "format-charging": " {capacity}%",
+    "format-icons": [" ", " ", " ", " ", " "],
+    "tooltip": true,
+    "tooltip-format": "Capacity: {capacity}% ({power}W)\n({time} remaining)", 
+    "tooltip-format-charging": "Charging: {capacity}% \n({power}W) - {time} until full", 
+    "tooltip-format-full": "Full: {capacity}%"
   },
   "custom/power": {
-    "format": "⏻",
-    "on-click": "wofi -show power-menu -modi power-menu:~/.config/rofi/powermenu.sh",
-    "tooltip": false
+    "format": " ⏻ ",
+    //"on-click": "wofi -show power-menu -modi power-menu:~/.config/rofi/powermenu.sh",
+    "on-click": "~/.config/rofi/scripts/powermenu.sh",
+    "tooltip": false,
+    "interval": 3600
   }
 }

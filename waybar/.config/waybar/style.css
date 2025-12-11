@@ -1,40 +1,59 @@
-
 * {
   font-family: "JetBrainsMono Nerd Font", monospace;
   font-size: 17px;
   border: none;
   border-radius: 0px;
   min-height: 0;
+  border-radius: 10px;
 }
 
 window#waybar {
+  background-color: transparent;
   background-color: rgba(30, 30, 30, 0.8); /* transparent black */
   color: #ffffff;
-  border-radius: 0px;
+  border-radius: 3px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  padding: 5px 0;
 }
 
 #custom-arch {
   padding: 0 5px;
-  font-size: 20px;
+  font-size: 23px;
   background-color: rgba(98, 114, 164, 0.6);
   background-color: transparent;
-  color: #ffffff;
-  color: #4897D7;
+  color: #fbff31;
   margin-right: 4px;
+}
+
+#workspaces {
+  border-radius: 10px;
+  background-color: rgba(40, 40, 40, 0.4);
 }
 
 #workspaces button {
   padding: 0 8px;
   margin: 0 2px;
   background-color: transparent;
-  color: #bbbbbb;
+  color: #ffffff;
+  border-radius: 10px;
+  opacity: .7;
+  transition: .2s;
 }
 
 #workspaces button.active {
   /*background-color: rgba(255, 255, 255, 0.1);*/
-  color: #ffffff;
-  border-top: 3px solid #A760B2;
+  /*border-top: 3px solid #A760B2;*/
+  /*border: 2px solid #A760B2;*/
+  color: #1183f0;
+  opacity: 1;
+  font-weight: 900;
+  font-size: 24px;
+  margin: 3px 2px;
+}
+
+#custom-window_icons {
+  background-color: rgba(40, 40, 40, 0.4);
+  margin: 3px 2px;
 }
 
 #hyprland-window {
@@ -48,6 +67,7 @@ window#waybar {
 #clock {
   background-color: rgba(100, 100, 100, 0.3);
   padding: 0 12px;
+  margin: 3px 2px;
   color: #ffffff;
 }
 
@@ -61,10 +81,59 @@ window#waybar {
 #battery,
 #custom-power {
   background-color: rgba(40, 40, 40, 0.4);
-  margin: 0 2px;
+  margin: 3px 2px;
   padding: 0 8px;
 }
 
+#custom-updates {
+  color: #9938db;
+}
+
+#cpu {
+  color: #d64141;
+}
+
+#memory {
+  color: #38caf8;
+}
+
+#battery {
+  color: #bfffff;
+}
+
+#backlight {
+  color: #ffefbd;
+}
+
 #custom-power {
+  margin: 0px 5px;
+  padding: 0px 5px;
   color: #e06c75;
+}
+
+/* -----------------------------------------------------
+   System Monitor Module Styles
+   ----------------------------------------------------- */
+
+#custom-sys_mon {
+    /* background-color: #1e1e2e;*/ /* Catppuccin Base */
+    background-color: rgba(100, 100, 100, 0.3);
+    color: #cdd6f4;
+    padding: 0px 10px;
+    margin: 0px 5px;
+    padding: 0 12px;
+    margin: 3px 2px;
+    border-radius: 10px;
+}
+
+tooltip {
+    background: #11111b; /* Darker Background (Crust) */
+    border: 1px solid #cba6f7; /* Purple border */
+    border-radius: 12px;
+}
+
+tooltip label {
+    font-family: "JetBrainsMono Nerd Font", monospace; /* Monospace is CRITICAL for the tables */
+    color: #cdd6f4;
+    padding: 10px;
 }
