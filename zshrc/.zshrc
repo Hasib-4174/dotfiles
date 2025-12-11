@@ -1,3 +1,6 @@
+# fastfetch
+# fastfetch --logo /home/hasib/.config/fastfetch/pngs/pochita.png --logo-type alacritty-direct --logo-width 40 --logo-height 15
+# fastfetch --kitty-direct /home/hasib/.config/fastfetch/pngs/makima.png --logo-width 40 --logo-height 15
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -58,6 +61,7 @@ setopt hist_find_no_dups
 
 # Aliases
 alias ls='ls --color'
+alias vi='vim'
 alias vim='nvim'
 alias c='clear'
 
@@ -70,3 +74,25 @@ alias c='clear'
 #export QT_IM_MODULE=ibus
 #export XMODIFIERS=@im=ibus
 
+#export PATH="$HOME/flutter/bin:$PATH"
+
+# Java
+# export JAVA_HOME=/usr/lib/jvm/java-25-openjdk
+# export PATH=$JAVA_HOME/bin:$PATH
+export JAVA_HOME=/usr/lib/jvm/openjdk-zulu-ca-fx-bin
+export PATH=$JAVA_HOME/bin:$PATH
+
+# Android SDK
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH
+
+# Flutter
+export PATH=$PATH:$HOME/flutter/bin
+
+#.npm-global
+export PATH="$HOME/.npm-global/bin:$PATH"
+export GEMINI_API_KEY=$(cat ~/.gemini_api_key)
+export PATH=$HOME/.local/bin:$PATH
+alias gemini2.5p='gemini chat --model=gemini-2.5-pro'
+alias gemini1.5f='gemini chat --model=gemini-1.5-flash'
+alias gemini2.5f='gemini chat --model=gemini-2.5-flash'
