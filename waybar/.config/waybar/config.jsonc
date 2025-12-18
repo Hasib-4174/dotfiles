@@ -1,0 +1,24 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "spacing": 4,
+    // workspaces | window : hyprland/workspaces or sway/workspaces | hyprland/window or sway/window
+    "modules-left": ["custom/logo", "sway/workspaces", "custom/sep","custom/window_icons", "custom/sep", "sway/window"],
+    // "tray" -> nm-applet(gui featurish network manager)
+    "modules-center": [],
+    "modules-right": [
+        "custom/update", 
+        "pulseaudio",
+        "battery", 
+        "network", 
+        "custom/cpu", 
+        "custom/gpu", 
+        "memory", 
+        "disk", 
+        "clock", 
+        "custom/swaync"
+    ],
+    // Load Modules
+    "include": ["~/.config/waybar/modules/modules.jsonc"]
+}

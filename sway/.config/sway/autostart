@@ -1,0 +1,29 @@
+# --- Core Desktop Services ---
+
+# 1. Notification Daemon
+exec swaync
+
+# 2. Wallpaper (Using swaybg)
+# exec swaybg -i ~/Pictures/wallpapers/city.png -m fill
+#
+# --- Wallpaper ---
+# exec ~/.config/swww/init.sh
+
+# 3. Status Bar (Using Waybar instead of Swaybar)
+exec waybar
+
+# 4. Authentication Agent (Polkit)
+# REQUIRED for GUI apps to ask for passwords (like GParted/Synaptic)
+# Ensure you have a polkit agent installed (like polkit-gnome).
+# exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# 5. Network Applet (System Tray)
+# exec nm-applet --indicator
+# exec GDK_BACKEND=wayland nm-applet --indicator
+
+# --- Screen Locking & Idle Management ---
+exec $lock_script
+
+# --- User Applications ---
+# Example: Launch your test terminal
+exec $term --class myfloatingterm

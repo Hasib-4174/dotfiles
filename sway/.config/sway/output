@@ -1,0 +1,9 @@
+# Default wallpaper fallback (if swaybg fails in autostart)
+output * bg #000000 solid_color
+
+# Monitor Configuration
+# usage: output <name> resolution <res> position <pos>
+# Run `swaymsg -t get_outputs` to find names.
+
+# Example:
+# output HDMI-A-1 resolution 1920x1080 position 0,0

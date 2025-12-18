@@ -1,0 +1,23 @@
+# ---------------------------------------------------
+# Main Sway Configuration Loader
+# ---------------------------------------------------
+
+# 1. Variables
+include ~/.config/sway/variables
+
+# 2. Appearance & Theme
+include ~/.config/sway/theme
+
+# 3. Input & Output (Hardware)
+include ~/.config/sway/input
+include ~/.config/sway/output
+
+# 4. Keybindings & Modes
+include ~/.config/sway/bindings
+include ~/.config/sway/modes
+
+# 5. Startup Applications & Daemons
+include ~/.config/sway/autostart
+
+# 6. System Configs (Default sway includes)
+include /etc/sway/config.d/*

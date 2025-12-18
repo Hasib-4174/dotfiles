@@ -1,0 +1,17 @@
+# Logo key. Use Mod1 for Alt, Mod4 for Super (Windows key).
+set $mod Mod1
+
+# Direction keys
+set $left h
+set $down j
+set $up k
+set $right l
+
+# Applications
+set $term alacritty
+set $menu rofi -show drun
+set $browser firefox
+set $files thunar
+
+# Helper variables for scripts
+set $lock_script ~/.config/sway/scripts/lock-sleep.sh

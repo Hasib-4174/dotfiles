@@ -1,24 +1,28 @@
 #!/bin/bash
 
 # Map app names to icons (edit this as you add more apps)
+# Icons:  󰈹 
 declare -A icons=(
-  ["brave-browser"]=" 󰈹"
-  ["firefox-developer-edition"]=" "
-  ["firefox"]=" "
-  ["google-chrome"]=" "
-  ["Alacritty"]=" "
-  ["foot"]=" "
-  ["kitty"]=" "
-  ["Code"]=" 󰨞"
-  ["GitKraken"]=" "
-  ["org.kde.dolphin"]=" "
+  ["brave-browser"]="󰈹"
+  ["firefox-developer-edition"]=""
+  ["firefox"]=""
+  ["google-chrome"]=""
+  ["Alacritty"]=""
+  ["foot"]=""
+  ["kitty"]=""
+  ["Code"]="󰨞"
+  ["GitKraken"]=""
+  ["org.kde.dolphin"]=""
   ["pcmanfm"]=" "
-  ["vlc"]=" "
-  ["mpv"]=" "
-  ["discord"]=" "
-  ["steam"]=" "
-  ["spotify"]=" "
-  ["jetbrains-studio"]=" "
+  ["vlc"]=""
+  ["mpv"]=""
+  ["imv"]=""
+  ["discord"]=""
+  ["steam"]=""
+  ["spotify"]=""
+  ["jetbrains-studio"]=""
+  ["Antigravity"]="󰠄"
+  ["libreoffice-writer"]=""
 )
 
 # Get all visible windows in the current workspace
