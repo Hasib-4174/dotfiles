@@ -45,7 +45,7 @@ window#waybar {
 }
 
 /* Right Modules Styling */
-#custom-update, #pulseaudio, #battery, #network, #custom-cpu, #custom-gpu, #memory, #disk, #clock, #custom-swaync {
+#custom-update, #pulseaudio, #battery, #network, #custom-cpu, #custom-gpu, #memory, #disk, #clock, #custom-swaync, #custom-control-panel {
     padding: 0 10px;
     margin: 4px 2px;
     background-color: @bg-alt;
@@ -67,6 +67,13 @@ window#waybar {
 }
 
 #custom-swaync {
+    background: @green;
+    color: @bg;
+    margin-right: 10px;
+    font-weight: 900;
+}
+
+#custom-control-panel {
     background: @green;
     color: @bg;
     margin-right: 10px;

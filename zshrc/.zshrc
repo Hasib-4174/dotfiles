@@ -96,3 +96,6 @@ export PATH=$HOME/.local/bin:$PATH
 alias gemini2.5p='gemini chat --model=gemini-2.5-pro'
 alias gemini1.5f='gemini chat --model=gemini-1.5-flash'
 alias gemini2.5f='gemini chat --model=gemini-2.5-flash'
+
+# --- Rust ---
+source "$HOME/.cargo/env"

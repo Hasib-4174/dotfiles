@@ -4,7 +4,7 @@
     "height": 34,
     "spacing": 4,
     // workspaces | window : hyprland/workspaces or sway/workspaces | hyprland/window or sway/window
-    "modules-left": ["custom/logo", "sway/workspaces", "custom/sep","custom/window_icons", "custom/sep", "sway/window"],
+    "modules-left": ["custom/logo", "hyprland/workspaces", "custom/sep","custom/window_icons", "custom/sep", "hyprland/window"],
     // "tray" -> nm-applet(gui featurish network manager)
     "modules-center": [],
     "modules-right": [
@@ -17,7 +17,8 @@
         "memory", 
         "disk", 
         "clock", 
-        "custom/swaync"
+        "custom/swaync",
+        "custom/control-panel"
     ],
     // Load Modules
     "include": ["~/.config/waybar/modules/modules.jsonc"]

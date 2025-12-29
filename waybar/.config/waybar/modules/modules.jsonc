@@ -111,5 +111,10 @@
         "tooltip": false,
         "format": "󰩤",
         "on-click": "swaync-client -t -sw"
-    }
+    },
+    "custom/control-panel": {
+    "format": " 󰍜 ",
+    "tooltip": "Toggle Control Panel",
+    "on-click": "~/code/overlay-panel/build/overlay-panel toggle"
+}
 }
