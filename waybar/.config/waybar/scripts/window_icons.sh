@@ -1,18 +1,22 @@
 #!/bin/bash
 
-# Map app names to icons (edit this as you add more apps)
-# Icons:  󰈹 
+# App names' mapping to icons 
+# Icons:  󰈹  
 declare -A icons=(
   ["brave-browser"]="󰈹"
   ["firefox-developer-edition"]=""
   ["firefox"]=""
   ["google-chrome"]=""
+  ["chromium"]=""
   ["Alacritty"]=""
   ["foot"]=""
   ["kitty"]=""
   ["Code"]="󰨞"
+  ["dev.zed.Zed"]=""
   ["GitKraken"]=""
   ["org.kde.dolphin"]=""
+  ["org.telegram.desktop"]=""
+  ["thunar"]=""
   ["pcmanfm"]=" "
   ["vlc"]=""
   ["mpv"]=""
@@ -23,6 +27,10 @@ declare -A icons=(
   ["jetbrains-studio"]=""
   ["Antigravity"]="󰠄"
   ["libreoffice-writer"]=""
+  ["minecraft"]="󰍳"
+  ["virt-manager"]=""
+  ["com.obsproject.Studio"]="󱜏"
+  ["blender"]="󰂫"
 )
 
 # Get all visible windows in the current workspace
