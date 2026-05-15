@@ -61,6 +61,7 @@ setopt hist_find_no_dups
 
 # Aliases
 alias ls='ls --color'
+alias lah='ls -lah'
 alias vi='vim'
 alias vim='nvim'
 alias c='clear'
@@ -79,23 +80,54 @@ alias c='clear'
 # Java
 # export JAVA_HOME=/usr/lib/jvm/java-25-openjdk
 # export PATH=$JAVA_HOME/bin:$PATH
-export JAVA_HOME=/usr/lib/jvm/openjdk-zulu-ca-fx-bin
-export PATH=$JAVA_HOME/bin:$PATH
+#export JAVA_HOME=/usr/lib/jvm/openjdk-zulu-ca-fx-bin
+#export PATH=$JAVA_HOME/bin:$PATH
 
 # Android SDK
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH
+#export ANDROID_HOME=$HOME/Android/Sdk
+#export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH
 
 # Flutter
-export PATH=$PATH:$HOME/flutter/bin
+#export PATH=$PATH:$HOME/flutter/bin
 
 #.npm-global
-export PATH="$HOME/.npm-global/bin:$PATH"
-export GEMINI_API_KEY=$(cat ~/.gemini_api_key)
-export PATH=$HOME/.local/bin:$PATH
-alias gemini2.5p='gemini chat --model=gemini-2.5-pro'
-alias gemini1.5f='gemini chat --model=gemini-1.5-flash'
-alias gemini2.5f='gemini chat --model=gemini-2.5-flash'
+#export PATH="$HOME/.npm-global/bin:$PATH"
+#export GEMINI_API_KEY=$(cat ~/.gemini_api_key)
+#export PATH=$HOME/.local/bin:$PATH
+#alias gemini2.5p='gemini chat --model=gemini-2.5-pro'
+#alias gemini1.5f='gemini chat --model=gemini-1.5-flash'
+#alias gemini2.5f='gemini chat --model=gemini-2.5-flash'
 
-# --- Rust ---
-source "$HOME/.cargo/env"
+# --- Rust --- (if installed)
+if [[ -f "$HOME/.cargo/env" ]]; then
+    source "$HOME/.cargo/env"
+fi
+
+raylib() {
+    # Compile all input files into a binary named 'out'
+    # Then immediately run that 'out' binary
+    g++ "$@" -o out -lraylib -lGL -lm -lpthread -ldl -lrt -lX11 && ./out
+}
+
+# Assemble, Link, and Run instantly
+asmrun() {
+    filename="${1%.*}"
+    nasm -f elf64 "$filename.asm" -o "$filename.o" && \
+    ld "$filename.o" -o "$filename" && \
+    ./"$filename"
+}
+asm64() {
+    filename="${1%.*}"
+    nasm -f elf64 "$filename.asm" -o "$filename.o" && \
+    ld "$filename.o" -o "$filename" && \
+    rm "$filename.o" && \
+    ./"$filename"
+}
+
+asm32() {
+    filename="${1%.*}"
+    nasm -f elf32 "$filename.asm" -o "$filename.o" && \
+    ld -m elf_i386 "$filename.o" -o "$filename" && \
+    rm "$filename.o" && \
+    ./"$filename"
+}
