@@ -46,7 +46,7 @@ bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
 # History
-HISTSIZE=5000
+HISTSIZE=20000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
@@ -63,7 +63,6 @@ setopt hist_find_no_dups
 alias ls='ls --color'
 alias lah='ls -lah'
 alias vi='vim'
-alias vim='nvim'
 alias c='clear'
 
 
@@ -131,3 +130,6 @@ asm32() {
     rm "$filename.o" && \
     ./"$filename"
 }
+
+# Created by `pipx` on 2026-06-01 07:02:54
+export PATH="$PATH:/home/hasib/.local/bin"
