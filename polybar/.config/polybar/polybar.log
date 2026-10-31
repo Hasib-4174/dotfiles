@@ -1,0 +1,26 @@
+polybar|notice:  Parsing config file: /home/hasib/.config/polybar/config.ini
+polybar|notice:  Listening for IPC messages (PID: 1152)
+polybar|notice:  Loading module 'i3' of type 'custom/script'
+polybar|notice:  Loading module 'active-window' of type 'internal/xwindow'
+polybar|notice:  Loading module 'w_icons' of type 'custom/script'
+polybar|notice:  Loading module 'tray' of type 'internal/tray'
+polybar|notice:  Loading module 'backlight' of type 'internal/backlight'
+polybar|notice:  Loading module 'pulseaudio' of type 'internal/pulseaudio'
+polybar|notice:  pulseaudio: using default sink 
+polybar|notice:  Loading module 'network' of type 'custom/script'
+polybar|notice:  Loading module 'battery' of type 'internal/battery'
+polybar|notice:  Loading module 'bluetooth' of type 'custom/script'
+polybar|notice:  Loading module 'cpu' of type 'internal/cpu'
+polybar|notice:  Loading module 'gpu' of type 'custom/script'
+polybar|notice:  Loading module 'memory' of type 'custom/script'
+polybar|notice:  Loading module 'filesystem' of type 'internal/fs'
+polybar|notice:  Loading module 'notifications' of type 'custom/script'
+polybar|notice:  Loading module 'date' of type 'custom/script'
+polybar|notice:  Loaded 15 modules
+polybar|notice:  Loaded font "JetBrainsMono Nerd Font:size=10" (name=JetBrainsMono Nerd Font, offset=2, file=/usr/share/fonts/TTF/JetBrainsMonoNerdFont-Regular.ttf)
+polybar|notice:  Loaded font "Symbols Nerd Font Mono:size=12" (name=JetBrainsMono Nerd Font, offset=3, file=/usr/share/fonts/TTF/JetBrainsMonoNerdFont-Regular.ttf)
+polybar|notice:  Loaded font "Symbols Nerd Font Mono:size=11" (name=JetBrainsMono Nerd Font, offset=3, file=/usr/share/fonts/TTF/JetBrainsMonoNerdFont-Regular.ttf)
+polybar|notice:  Loaded font "Noto Color Emoji:scale=10" (name=Noto Color Emoji, offset=2, file=/usr/share/fonts/noto/NotoColorEmoji.ttf)
+polybar|warn:  Ignoring restack of i3 window (not needed when `override-redirect = false`)
+polybar|notice:  pulseaudio: using default sink alsa_output.pci-0000_c3_00.6.analog-stereo
+polybar|notice:  pulseaudio: using default sink alsa_output.pci-0000_c3_00.6.analog-stereo
